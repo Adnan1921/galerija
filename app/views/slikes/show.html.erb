@@ -1,0 +1,56 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Naziv slike:</strong>
+  <%= @slike.naziv_slike %>
+</p>
+
+<p>
+  <strong>Slika:</strong>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @slike.datum %>
+</p>
+
+<%= link_to 'Edit', edit_slike_path(@slike) %> |
+<%= link_to 'Back', slikes_path %>
+	<!-- Extra large modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
+
+	<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xl">
+	    <div class="modal-content">
+	     <%= image_tag(@slike.avatar, :width=>1000, :height=>800) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Large modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	     <%= image_tag(@slike.avatar, :width=>900, :height=>500) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Small modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+
+	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <%= image_tag(@slike.avatar, :width=>100, :height=>100) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+</div>
+	
+	

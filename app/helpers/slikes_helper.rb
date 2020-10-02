@@ -1,0 +1,2 @@
+module SlikesHelper
+end

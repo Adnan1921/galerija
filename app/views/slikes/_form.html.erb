@@ -1,0 +1,59 @@
+<div class="container">
+<%= form_with(model: slike, local: true) do |form| %>
+  <% if slike.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slike.errors.count, "error") %> prohibited this slike from being saved:</h2>
+
+      <ul>
+        <% slike.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <div class="col text-center">
+              <h1>Dodaj sliku</h1>
+              <p class="text-h3">Nesto zanimljivo </p>
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+    <%= form.label :naziv_slike %>
+    <%= form.text_field :naziv_slike %>
+  </div>
+</div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+  <div class="field">
+    <%= form.label :slika %>
+    <%= form.file_field :avatar %>
+  </div>
+</div>
+</div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+  <div class="field">
+    <%= form.label :datum %>
+    <%= form.date_select :datum %>
+  </div>
+<div>
+  <div class="row align-items-center mt-4">
+    <div class="col">
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</div>
+  </section>
+	<% end %>
+	
+	
+	
+	
+	
+
+	
