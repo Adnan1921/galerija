@@ -1,0 +1,32 @@
+	<button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="modal" data-target=".bd-example-modal-xl">Velika slika</button>
+
+	<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xl">
+	    <div class="modal-content">
+	     <%= image_tag(@slike.velika) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Large modal -->
+	<button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="modal" data-target=".bd-example-modal-lg">Srednja slika</button>
+
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	     <%= image_tag(@slike.srednja) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Small modal -->
+	<button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="modal" data-target=".bd-example-modal-sm">Thumbnail</button>
+
+	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <%= image_tag(@slike.thumbnail) if @slike.avatar.attached? %>
+	    </div>
+	  </div>
+	</div>
+</div>
